@@ -1,3 +1,6 @@
+> composer require pointdeb/zpaginate
+```php
+<?php
 use Zpaginate\Zpaginate;
 
 
@@ -20,3 +23,5 @@ public function testPaginate()
 
 
 }
+
+?>
