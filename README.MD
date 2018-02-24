@@ -1,4 +1,4 @@
-> composer require pointdeb/zpaginate
+> composer require pointdeb/zpaginate dev-master
 ```php
 <?php
 use Zpaginate\Zpaginate;
