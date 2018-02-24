@@ -1,0 +1,22 @@
+{
+    "name": "pointeb/zpaginate",
+    "description": "simple pagination using php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stephano Romain",
+            "email": "stephano.romain@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Zpaginate\\": "src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    }
+}
