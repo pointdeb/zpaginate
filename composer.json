@@ -18,5 +18,10 @@
     "require": {},
     "require-dev": {
         "phpunit/phpunit": "^7.0"
-    }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

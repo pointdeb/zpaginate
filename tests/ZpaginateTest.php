@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: smohamady
- * Date: 21/02/2018
- * Time: 11:40
- */
+
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;

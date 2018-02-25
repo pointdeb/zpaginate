@@ -3,25 +3,34 @@
 <?php
 use Zpaginate\Zpaginate;
 
+```..............
+```php
 
 public function testPaginate()
 {
+    // initialize data
+
     $data = [];
     for ($i = 0; $i < 10; $i ++ ) {
         $data[] = ['name' => "Name $i"];
     }
 
-    $result = Zpaginate::paginate($data, 3, 5, 3);
+    // set params
 
+    $current = 3;
+    $per_page = 5;
+    $per_link = 3;
+
+    // execute paginate
+
+    $result = Zpaginate::paginate($data, $current, $per_page, $per_link);
+
+    // hope you'l see the output
+    
     print_r($result);
-
-    $this->assertArrayHasKey('data', $result);
-    $this->assertArrayHasKey('links', $result);
-
-    $this->assertEquals(5, count($result['data']));
-    $this->assertEquals(2, count($result['links']));
-
-
 }
+
+```..............
+```php
 
 ?>
