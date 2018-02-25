@@ -52,7 +52,7 @@ class Zpaginate
       // generate links
       $links = [];
       for ($i = $min; $i <= $max; $i++) {
-        $links[] = ['active' => $i, 'label' => $i + 1, 'value' => $i];
+        $links[] = ['active' => $i == $current, 'label' => $i + 1, 'value' => $i];
       }
 
       // set prev
