@@ -7,15 +7,15 @@ class Zpaginate
 
     public static function paginateData(array $data = [], $current = 0, $per_page = 5)
     {
-        // asjust current
+        $max = count($data) - 1;
+        // adjust current
         $current = $current <= 0 ? 0 : $current;
-        $current = $current > ceil(count($data) / $per_page) - 1 ? ceil(count($data) / $per_page) - 1 : $current;
+        $current = $current > $max ? $max : $current;
         // declare limit offset
-        $limit = $per_page * $current;
-        $offset = $limit + $per_page;
+        $limit = ($per_page * $current) - 1;
         // adjust offset;
-        $offset = $offset >= count($data) ? count($data) : $offset;
-
+        $offset = $per_page;
+//        print_r("\n$limit---$offset--$max---$current\n");
         return array_slice($data, $limit, $offset);
     }
 

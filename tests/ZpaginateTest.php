@@ -16,15 +16,17 @@ class ZpaginateTest extends TestCase
     public function testPaginateData()
     {
         $data = [];
-        for ($i = 0; $i < 10; $i ++ ) {
+        for ($i = 0; $i < 15; $i ++ ) {
             $data[] = ['name' => "Name $i"];
         }
 
-        $result = Zpaginate::paginateData($data, 3, 5);
-
-        print_r($result);
+        $result = Zpaginate::paginateData($data, 2, 5);
 
         $this->assertEquals(5, count($result));
+
+        $result = Zpaginate::paginateData($data, 3, 5);
+
+        $this->assertEquals(1, count($result));
 
     }
 
@@ -37,7 +39,7 @@ class ZpaginateTest extends TestCase
 
         $result = Zpaginate::paginateLinks(count($data), 3, 5, 3);
 
-        print_r($result);
+//        print_r($result);
 
         $this->assertEquals(2, count($result));
 
@@ -46,13 +48,13 @@ class ZpaginateTest extends TestCase
     public function testPaginate()
     {
         $data = [];
-        for ($i = 0; $i < 10; $i ++ ) {
+        for ($i = 0; $i < 20; $i ++ ) {
             $data[] = ['name' => "Name $i"];
         }
 
         $result = Zpaginate::paginate($data, 3, 5, 3);
 
-        print_r($result);
+//        print_r($result);
 
         $this->assertArrayHasKey('data', $result);
         $this->assertArrayHasKey('links', $result);
