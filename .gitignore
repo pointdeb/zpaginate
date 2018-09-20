@@ -1,6 +1,6 @@
 # Created by https://www.gitignore.io/api/git,code,composer,phpstorm
 
-.idea*
+**.idea*
 
 ### Code ###
 # Visual Studio Code - https://code.visualstudio.com/
