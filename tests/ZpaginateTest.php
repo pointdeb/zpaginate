@@ -16,7 +16,7 @@ class ZpaginateTest extends TestCase
     public function testPaginateData()
     {
         $data = [];
-        for ($i = 0; $i < 15; $i ++ ) {
+        for ($i = 0; $i <= 15; $i ++ ) {
             $data[] = ['name' => "Name $i"];
         }
 

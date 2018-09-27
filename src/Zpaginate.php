@@ -12,7 +12,7 @@ class Zpaginate
         $current = $current <= 0 ? 0 : $current;
         $current = $current > $max ? $max : $current;
         // declare limit offset
-        $limit = ($per_page * $current) - 1;
+        $limit = ($per_page * $current);
         // adjust offset;
         $offset = $per_page;
 //        print_r("\n$limit---$offset--$max---$current\n");
