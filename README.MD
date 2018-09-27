@@ -7,9 +7,6 @@
 <?php
 use Zpaginate\Zpaginate;
 
-```..............
-```php
-
 public function testPaginate()
 {
     // initialize data
@@ -35,7 +32,5 @@ public function testPaginate()
     print_r($result);
 }
 
-```..............
-```php
-
 ?>
+```
