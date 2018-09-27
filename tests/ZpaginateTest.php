@@ -37,11 +37,17 @@ class ZpaginateTest extends TestCase
             $data[] = ['name' => "Name $i"];
         }
 
-        $result = Zpaginate::paginateLinks(count($data), 3, 5, 3);
+        $result = Zpaginate::paginateLinks(count($data), 3, 5, 3, false);
 
 //        print_r($result);
 
         $this->assertEquals(2, count($result));
+
+        $result = Zpaginate::paginateLinks(count($data), 3, 5, 3, true);
+
+//        print_r($result);
+
+        $this->assertEquals(0, count($result));
 
     }
 
